@@ -6,6 +6,8 @@ import { AdminLoginInfo } from "../../../api/types/admin/auth-interface";
 import { loginAdmin } from "../../../api/endpoints/auth/auth";
 import { setToken } from "../../../redux/reducers/authSlice";
 import { useDispatch } from "react-redux";
+import { APP_LOGO } from "constants/common";
+import { Link } from "react-router-dom";
 
 const AdminLoginPage: React.FC = () => {
   const navigate = useNavigate();
@@ -34,11 +36,13 @@ const AdminLoginPage: React.FC = () => {
     <div className='flex justify-center items-center pt-28 pb-32 bg-gray-100 text-customFontColorBlack'>
       <div className='bg-white rounded-lg mx-10 shadow-xl mt-2 p-8 w-full max-w-md md:mx-auto md:p-10 lg:p-12'>
         <div className='sm:mx-auto sm:w-full sm:max-w-sm'>
-          <img
+                  <Link to="/">
+                      <img
             className='mx-auto h-10 w-auto'
-            src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600'
-            alt='Your Company'
-          />
+            src={APP_LOGO}
+            alt='E-Learning'
+                  />
+                      </Link>
           <h2 className='mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900'>
             Admin Sign in
           </h2>
