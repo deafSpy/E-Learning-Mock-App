@@ -3,18 +3,18 @@ import CustomApiError from "../../utils/CustomApiError";
 import CONFIG_KEYS from "../../config";
 import { refreshTokenApi } from "../endpoints/auth/token-refresh";
 
-console.log(CONFIG_KEYS)
+// console.log(CONFIG_KEYS)
 const api: AxiosInstance = axios.create({
 //   baseURL: CONFIG_KEYS.API_BASE_URL,
   baseURL: 'http://localhost:4000',
 });
 
-console.log("API", api)
+// console.log("API", api)
 
 api.interceptors.request.use(
   (config) => {
         const tokenString = localStorage.getItem("accessToken");
-        console.log("tokenString", tokenString)
+        // console.log("tokenString", tokenString)
     if (tokenString) {
       const token = JSON.parse(tokenString);
       config.headers.Authorization = `Bearer ${token.accessToken}`;
@@ -30,7 +30,7 @@ api.interceptors.response.use(
   (response) => response,
   async (error) => {
       const originalRequest = error.config;
-      console.log("or", error?.response?.status, originalRequest)
+    //   console.log("or", error?.response?.status, originalRequest)
 
     // Check if the response status is 401 (unauthorized) and it's not a retry request
     if (error?.response?.status === 401 && !originalRequest._retry) {
