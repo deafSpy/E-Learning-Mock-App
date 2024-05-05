@@ -24,7 +24,9 @@ const Quizzes: React.FC<{ lessonId: string | undefined }> = ({ lessonId }) => {
 
   const fetchQuizzes = async (lessonId: string) => {
     try {
-      const response = await getQuizzesByLesson(lessonId);
+        const response = await getQuizzesByLesson(lessonId);
+        console.log(response)
+        console.log(response?.data)
       setQuizzes(response?.data?.questions);
     } catch (error: any) {
       toast.error(error?.data?.message, {
@@ -84,7 +86,7 @@ const Quizzes: React.FC<{ lessonId: string | undefined }> = ({ lessonId }) => {
       <div className='flex flex-col items-center justify-center h-auto mb-5'>
         <div>
           <h2 className='text-xl font-semibold mt-3'>
-            Congrats! your score is...{score}/{quizzes.length}
+            Your score is {score}/{quizzes.length}
           </h2>
         </div>
       </div>
