@@ -32,11 +32,13 @@ export function AdminSideNav() {
 
   return (
     <Card className="h-[calc(100vh-1rem)] w-full max-w-[20rem] p-4 m-3 shadow-xl shadow-blue-gray-900/5">
-      <div className="mb-2 flex items-center gap-4 p-4">
-        <img src={APP_LOGO} alt="brand" className="h-10" />
+          <div className="mb-2 flex items-center gap-4 p-4">
+              <Link to="/">
+        <img src={APP_LOGO} alt="E-Learning" className="h-10" />
         {/* <Typography variant="h5" color="blue-gray">
           E-Learning
         </Typography> */}
+                  </Link>
       </div>
       <List>
         {navItems.map((item, index) => (
