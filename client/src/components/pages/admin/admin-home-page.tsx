@@ -50,13 +50,14 @@ const AdminHomePage: React.FC = () => {
       <div className='ml-3 mr-3 flex items-center justify-between'>
         <div className='bg-white flex-1 rounded-md pb-5 pr-5 pl-5 border shadow-sm border-gray-200 mr-4'>
           <div className='flex items-center '>
-            <FaRupeeSign size={26} className='text-green-500 mr-3' />
+                      {/*<FaRupeeSign size={26} className='text-green-500 mr-3' />*/}
+            
             <div>
               <Typography variant='h6' color='blue-gray' className='pt-2 '>
                 Monthly revenue
               </Typography>
               <Typography variant='body' color='gray'>
-                {formatToINR(dashboardData?.monthlyRevenue ?? 0)}
+                $ {formatToINR(dashboardData?.monthlyRevenue ?? 0)}
               </Typography>
             </div>
           </div>
