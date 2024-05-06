@@ -5,8 +5,8 @@ import { refreshTokenApi } from "../endpoints/auth/token-refresh";
 
 // console.log(CONFIG_KEYS)
 const api: AxiosInstance = axios.create({
-//   baseURL: CONFIG_KEYS.API_BASE_URL,
-  baseURL: 'http://localhost:4000',
+  baseURL: CONFIG_KEYS.API_BASE_URL,
+//   baseURL: 'http://localhost:4000',
 });
 
 // console.log("API", api)
