@@ -68,7 +68,7 @@ const ViewCourseStudent: React.FC = () => {
   );
 
   const course: CourseInterface | null = data;
-  course && dispatch(setCourse({ course }));
+    course && dispatch(setCourse({ course }));
 
   const handleToggle = (index: any) => {
     setExpandedIndex(index === expandedIndex ? null : index);
@@ -91,7 +91,8 @@ const ViewCourseStudent: React.FC = () => {
     });
     setSuccessToastShown(true);
   }
-  const enrolled = course?.coursesEnrolled.includes(studentId ?? "");
+    const enrolled = course?.coursesEnrolled.includes(studentId ?? "");
+    
   return (
     <div className='bg-white w-full'>
       <LoginConfirmation
@@ -147,7 +148,7 @@ const ViewCourseStudent: React.FC = () => {
             <div className='flex justify-between items-center mb-6'>
               <div>
                 <h4 className='text-xl font-semibold'>Instructor</h4>
-                <p className='text-gray-700'>John Doe</p>
+                    <p className='text-gray-700'>Karthik Vaidhyanathan</p>
               </div>
               <div>
                 <h4 className='text-xl font-semibold'>Duration</h4>
@@ -210,12 +211,12 @@ const ViewCourseStudent: React.FC = () => {
                         <PdfViewer pdfUrl={course?.guidelinesUrl ?? ""} />
                       )}
 
-                      {/* <Link to={`watch-lessons/introduction`}>
+                      <Link to={`watch-lessons/introduction`}>
                         <li className='p-6 border-b flex items-center cursor-pointer hover:bg-customBlueShade'>
                           <BiVideo className='mr-2 text-blue-500' />
                           <span className='flex-1'>Introduction video</span>
                         </li>
-                      </Link> */}
+                      </Link>
                     </ul>
                   </li>
                 )}
