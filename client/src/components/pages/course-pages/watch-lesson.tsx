@@ -94,14 +94,16 @@ const WatchLessons: React.FC = () => {
     };
   }, []);
 
-  let content = null;
+    let content = null;
+    
+    console.log(lesson)
 
   if (selectedItemIndex === 0) {
-    content = <AboutLesson about={lesson?.description ?? ""} />;
+    content = lesson?.description
   } else if (selectedItemIndex === 1) {
     content = <Discussion lessonId={currentLessonId ?? ""} />;
   } else {
-    content = <Quizzes lessonId={lessonId} />;
+    content = <Quizzes lessonId={currentLessonId ?? ""} />;
   }
   if (isLoadingAllLessons && isLoadingLesson) {
     return <ShimmerEffectWatchLessons />;
@@ -113,10 +115,11 @@ const WatchLessons: React.FC = () => {
       ) : (
         <div className='md:w-3/4 w-full  overflow-y-scroll scrollbar-track-blue-gray-50 scrollbar-thumb-gray-400 scrollbar-thin scrollbar-h-md'>
           <div className='h-3/4'>
-            <VideoPlayer
+            {/* <VideoPlayer
               videoKey={videoKey}
               isCoursePurchased={currentCourse && currentCourse.isPaid ? isCoursePurchased : true}
-              />
+              /> */}
+            <iframe width="800" height="600" src="https://www.youtube.com/embed/D56xD2lktnI?si=6GbYl30V8BI3_76w" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin"></iframe>
           </div>
           <div className=''>
             <ul className='flex p-3'>
@@ -170,7 +173,7 @@ const WatchLessons: React.FC = () => {
           Lessons
         </h1>
         <ul>
-          {/* <li
+          <li
             onClick={() => {
               setCurrentLessonId(currentCourse?._id);
               setVideoKey(currentCourse?.introduction?.key??"")
@@ -183,11 +186,11 @@ const WatchLessons: React.FC = () => {
               }  
               `}
           >
-            <BiVideo className='mr-2 text-blue-500' />
+            <BiVideo className='mr-2 text-blue-500' />    
             <span className='flex-1 text-sm font-light text-gray-700'>
-              Episode 0{0} - Introduction to the course
+              Episode {0} - Introduction to the course
             </span>
-          </li> */}
+          </li>
 
           {allLessons.map((lesson, index) => (
             <li
