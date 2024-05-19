@@ -29,11 +29,14 @@ const ViewInstructorRequests: React.FC = () => {
 
   return (
     <ul role='list' className=' divide-gray-100  '>
-      {requests?.map((person: InstructorApiResponse) => (
+          {requests?.map((person: InstructorApiResponse) => (
+          
+              
         <Link
           to={`/admin/instructors/requests/${person._id}`}
           key={person?._id}
-        >
+              >
+
           <li className='flex justify-between gap-x-6 gap-y-3 mt-3 p-3 py-5 rounded-md border bg-white border-gray-300'>
             <div className='flex gap-x-4'>
               <img
