@@ -12,7 +12,8 @@ import {
   Bars2Icon,
 } from "@heroicons/react/24/outline";
 import { ProfileMenu } from "./profile-menu-instructor";
- 
+import { APP_LOGO } from "constants/common";
+import { Link } from "react-router-dom";
  
 // nav list menu
 const navListMenuItems = [
@@ -152,14 +153,16 @@ export default function InstructorHeader() {
  
   return (
     <Navbar className="mx-auto border-b bg-white border-gray-300 max-w-full   lg:pl-6 shadow-none rounded-none">
-      <div className="relative mx-auto flex items-center text-blue-gray-900">
-        <Typography
+          <div className="relative mx-auto flex items-center text-blue-gray-900">
+        <Link to ="/"><img src={APP_LOGO} alt="E-Learning" className="h-10" /></Link>
+              
+        {/* <Typography
           as="a"
           href="#"
           className="mr-4 ml-2 cursor-pointer py-1.5 font-semibold text-2xl"
         >
           E-Learning
-        </Typography>
+        </Typography> */}
         <div className="absolute top-2/4 left-2/4 hidden -translate-x-2/4 -translate-y-2/4 lg:block">
           <NavList />
         </div>
