@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setToken } from "../../../redux/reducers/authSlice";
 import { selectUserType } from "../../../redux/reducers/authSlice";
 import { selectIsLoggedIn } from "../../../redux/reducers/authSlice";
+import { APP_LOGO } from "constants/common";
 const InstructorLoginPage: React.FC = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch()
@@ -40,11 +41,12 @@ const InstructorLoginPage: React.FC = () => {
     <div className='flex justify-center items-center mt-20 pt-5 pb-20  text-customFontColorBlack'>
       <div className='bg-white rounded-lg mx-10 shadow-xl border p-8 w-full max-w-md md:mx-auto md:p-10 lg:p-12'>
         <div className='sm:mx-auto sm:w-full sm:max-w-sm'>
-          <img
+          <Link to="/"><img
             className='mx-auto h-10 w-auto'
-            src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600'
-            alt='Your Company'
-          />
+            src={APP_LOGO}
+            alt='E-Learning'
+                  />
+                      </Link>
           <h2 className='mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900'>
             Sign in to your account
           </h2>
