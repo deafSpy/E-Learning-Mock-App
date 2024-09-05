@@ -35,7 +35,7 @@ const StudentRegistrationPage: React.FC = () => {
             <img
               className='mx-auto h-10 w-auto'
               src={APP_LOGO}
-              alt='Your Company'
+              alt='E-Learning'
             />
             <h2 className='mt-3 lg:mt-5 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900'>
               Register here..
