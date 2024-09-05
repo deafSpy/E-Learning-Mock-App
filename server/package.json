@@ -1,5 +1,5 @@
 {
-  "name": "abin",
+  "name": "shreyu",
   "version": "1",
   "description": "learning platfrom",
   "main": "y",
@@ -8,7 +8,7 @@
     "build": "tsc",
     "dev": "nodemon ./src/app.ts"
   },
-  "author": "abin t h",
+  "author": "shreyu palely",
   "license": "ISC",
   "dependencies": {
     "@aws-sdk/client-cloudfront": "^3.363.0",
