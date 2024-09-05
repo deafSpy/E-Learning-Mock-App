@@ -24,7 +24,7 @@ const connection = () => {
     //   client.on('error', err => console.log('Redis Client Error', err));
     //   await client.connect()
     client.connect().then(()=>{
-      console.log("Redis connected successfully".bg_red.bold)
+      console.log("Redis connected successfully".bg_magenta)
     }).catch((err) => {
         console.log("hi")
       console.log(err)

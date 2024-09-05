@@ -4,7 +4,7 @@ const LINKS = [
   { name: "Home", href: "/" },
   { name: "Courses", href: "/courses" },
   { name: "Tutors", href: "/tutors" },
-  { name: "Community", href: "/community" },
+//   { name: "Community", href: "/community" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];

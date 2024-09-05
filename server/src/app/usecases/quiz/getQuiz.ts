@@ -12,7 +12,9 @@ export const getQuizzesLessonU = async (
     throw new AppError('Lesson id not found', HttpStatusCodes.BAD_REQUEST);
   }
   const quizzes: QuizInterface | null =
-    await quizDbRepository.getQuizByLessonId(lessonId);
+      await quizDbRepository.getQuizByLessonId(lessonId);
+    
+    console.log(lessonId, quizzes)
     
   return shuffleQuiz(quizzes);
 };

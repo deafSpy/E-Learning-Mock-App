@@ -46,7 +46,7 @@ const StudentHeader: React.FC = () => {
                 <div className='flex items-center'>
                   <div className='flex-shrink-0 '>
                     <Link to='/'>
-                      <img className='h-10' src={APP_LOGO} alt='Your Company' />
+                      <img className='h-10' src={APP_LOGO} alt='E Learning' />
                     </Link>
                   </div>
                   <div className='hidden md:block'>
@@ -99,7 +99,7 @@ const StudentHeader: React.FC = () => {
                           </button>
                         </Link>
                         <Link to='/instructors/login'>
-                          <button className='bg-purple-800 hover:bg-purple-900 text-xs text-white lg:text-sm font-bold py-2 px-2 rounded focus:outline-none focus:shadow-outline'>
+                          <button className='bg-[#FF829F] hover:bg-purple-900 text-xs text-white lg:text-sm font-bold py-2 px-2 rounded focus:outline-none focus:shadow-outline'>
                             Instructor Login
                           </button>
                         </Link>

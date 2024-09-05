@@ -238,7 +238,9 @@ const courseController = (
   const getQuizzesByLesson = asyncHandler(
     async (req: Request, res: Response) => {
       const lessonId = req.params.lessonId;
-      const quizzes = await getQuizzesLessonU(lessonId, dbRepositoryQuiz);
+          const quizzes = await getQuizzesLessonU(lessonId, dbRepositoryQuiz);
+          
+        //   console.log(quizzes)
       res.status(200).json({
         status: 'success',
         message: 'Successfully retrieved quizzes based on the lesson',
