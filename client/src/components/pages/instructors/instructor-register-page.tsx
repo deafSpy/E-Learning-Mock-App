@@ -6,6 +6,8 @@ import { instructorRegistrationValidationSchema } from "../../../validations/aut
 import { PhotoIcon } from "@heroicons/react/24/solid";
 import { InstructorRegisterDataInterface } from "../../../api/types/instructor/auth-interface";
 import SpinnerDialog from "../../common/spinner-page";
+import { APP_LOGO } from "constants/common";
+import { Link } from "react-router-dom";
 const initialValues = {
   firstName: "",
   lastName: "",
@@ -67,11 +69,13 @@ const InstructorRegistrationPage: React.FC = () => {
         {isUploading && <SpinnerDialog isUploading={isUploading} />}
         <div className=' w-2/3 ml-2 mt-6 mb-8 border p-10 shadow-xl rounded-lg'>
           <div className='sm:mx-auto sm:w-full sm:max-w-sm'>
-            <img
+            <Link to="/"><img
               className='mx-auto h-10 w-auto'
-              src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600'
-              alt='Your Company'
-            />
+              src={APP_LOGO}
+              alt='E-Learning'
+                      />
+            </Link>                          
+                        
             <h2 className='mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900'></h2>
           </div>
           <Formik

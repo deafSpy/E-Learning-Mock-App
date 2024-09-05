@@ -11,6 +11,7 @@ import { useSelector } from "react-redux";
 import { selectIsLoggedIn } from "../../../redux/reducers/authSlice";
 import { APP_LOGO } from "../../../constants/common";
 import { selectUserType } from "../../../redux/reducers/authSlice";
+
 const StudentLoginPage: React.FC = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -44,11 +45,13 @@ const StudentLoginPage: React.FC = () => {
       <div className='flex justify-center items-center mt-16  text-customFontColorBlack'>
         <div className='bg-white rounded-lg mx-4 shadow-xl border p-8 w-full max-w-md md:mx-auto md:p-10 lg:p-12'>
           <div className='sm:mx-auto sm:w-full sm:max-w-sm'>
-            <img
+                      <Link to="/">
+                      <img
               className='mx-auto h-10 w-auto'
               src={APP_LOGO}
-              alt='Your Company'
-            />
+              alt='E-Learning'
+                          />
+                          </Link>
             <h2 className='mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900'>
               Sign in to your account
             </h2>
